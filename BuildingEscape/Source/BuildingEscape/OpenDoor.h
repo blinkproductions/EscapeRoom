@@ -5,6 +5,9 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Engine/TriggerVolume.h"
+#include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
+//#include "GameFramework/Pawn.h"
 #include "OpenDoor.generated.h" // has to be the last include
 
 
@@ -34,7 +37,7 @@ private:
 	UPROPERTY(EditAnywhere)
 	ATriggerVolume * PressurePlate;
 	
-	UPROPERTY(EditAnywhere)
+	
 	AActor * ActorThatOpens; // remember pawn inherits from actor
 		
 };
