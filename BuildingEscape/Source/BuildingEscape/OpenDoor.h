@@ -7,6 +7,7 @@
 #include "Engine/TriggerVolume.h"
 #include "Engine/World.h"
 #include "GameFramework/PlayerController.h"
+#include "Components/PrimitiveComponent.h"
 //#include "GameFramework/Pawn.h"
 #include "OpenDoor.generated.h" // has to be the last include
 
@@ -31,6 +32,8 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	
+
 private:
 	UPROPERTY(EditAnywhere)
 		float OpenAngle = -90.f;
@@ -43,7 +46,9 @@ private:
 
 	float LastDoorOpenTime;
 
-	AActor * ActorThatOpens; // remember pawn inherits from actor
+	// Returns total mass in kg
+	float GetTotalMassOfActorsOnPlate();
+	
 	AActor * Owner; // The owning door
 	
 		

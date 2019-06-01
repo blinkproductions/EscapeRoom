@@ -60,4 +60,5 @@ private:
 
 	// Returns current end of reach line
 	FVector GetReachLineEnd();
+	
 };
